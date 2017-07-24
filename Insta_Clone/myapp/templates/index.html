@@ -5,39 +5,49 @@
     <title>Instagram Clone</title>
 </head>
 <body>
-	<div class="main">
-            <h1> Instagram Clone</h1>
-            <h3>Sign Up</h3>
-    </div>
+<h1> <center>Welcome to Instagram Clone</center></h1><hr>
+<h3><center>Sign Up</center></h3>
+            <h4>{{ today }}</h4>
 
     <div>
         <form method="post">
+            {% csrf_token %}
+               <center> <label for="username">Username: </label>
+                <input id="username" type="text" size="39" name="username" value={{ username }}>
+                <br>
+                   <br>
+                   <br>
 
-            <div>
-                <label for="username">Username: </label>
-                <input id="username" type="text" name="username" value={{ username }}>
-            </div>
-
-            <div>
                 <label for="name">Name: </label>
-                <input id="name" type="text" name="name" value={{ name }}>
-            </div>
+                <input id="name"  type="text" size="43" name="name" value={{ name }}>
+                <br>
+                   <br>
+                   <br>
 
-            <div>
                 <label for="email">Email: </label>
-                <input id="email" type="text" name="email" value={{ email }}>
-            </div>
+                <input id="email" type="text" size="43" name="email" value={{ email }}>
+                <br>
+                   <br>
+                   <br>
 
-            <div>
+
                 <label for="password">Password: </label>
-                <input id="password" type="password" name="password" value={{ password }}>
-            </div>
-                <input type="submit" value="Sign Up">
+                <input id="password" type="password" size="40" name="password" value={{ password }}>
+                <br>
+                   <br>
+                   <br>
+                <input type="submit" value="Sign Up"><br>
+                   <br>
+                   <hr>
+                </center>
         </form>
+    </div>
 
 
     </div><br><br>
 
-    <div><h3>Already a user?</h3><a href="login/">Login</a> </div>
+<center><div><h3>Already a user?</h3><a href="login/">Login</a> </div></center>
 </body>
 </html>
+
+</center>
